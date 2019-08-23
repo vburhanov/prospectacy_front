@@ -1,0 +1,39 @@
+//- Все примеси в этом файле должны начинаться c имени блока (portfolio)
+
+mixin portfolio(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +portfolio('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' portfolio--' + modsList[i].trim();
+      }
+    }
+
+  .portfolio(class=allMods)&attributes(attributes)
+    .portfolio__inner.container
+      .row.mb-5
+        .col-12
+          span.title-block
+            | Портфолио побед
+            br/ наших клиентов
+      .row
+        .col-lg-6
+          .portfolio__inner__cover
+            .portfolio__inner__cover__title Портфолио
+            .portfolio__inner__cover__numb
+              span 94%
+              span дел
+            p
+              | завершились в пользу
+              br/ наших клиентов
+        .col-lg-6
+      block

@@ -1,0 +1,43 @@
+// В этом файле должны быть стили для БЭМ-блока portfolio, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.portfolio {
+  background-color: $gray-bgr-lite2;
+  &__inner {
+    padding: 8% 0;
+    @media (min-width: $screen-lg) {
+      margin-left: 9%;
+      margin-right: 9%;
+    }
+    @media (min-width: $screen-xl){
+      margin-left: 16%;
+      margin-right: 16%;
+    }
+    &__cover {
+      padding: 56px;
+      border: 1px solid #CFCFCF;
+      display: flex;
+      flex-direction: column;
+      &__title {
+        color: $gray;
+        text-transform: uppercase;
+        font-size: .875rem;
+      }
+      &__numb {
+        margin-top: 118px;
+        color: $main-blue;
+        font-family: $font-family-b;
+        text-transform: uppercase;
+        line-height: normal;
+        font-size: 6.4375rem;
+        display: flex;
+        flex-direction: column;
+      }
+      p {
+        margin-top: 33px;
+        font-size: 1.875rem;
+      }
+    }
+  }
+}

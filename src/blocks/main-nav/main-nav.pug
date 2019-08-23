@@ -1,0 +1,30 @@
+//- Все примеси в этом файле должны начинаться c имени блока (main-nav)
+//- Структура меню — в main-nav.data.pug
+
+mixin main-nav(selectedID)
+
+  //- Принимает:
+  //-   selectedID {string} - id пункта меню (по умолчанию — из main-nav.data.pug)
+  //- Вызов:
+        +main-nav('1')
+
+  //- подключаем файл со структурой данных блока
+  include main-nav.data.pug
+
+  div.collapse.navbar-collapse#mainMenu
+    ul.navbar-nav
+      each menuItem in mainMenu
+        +main-nav-item(selectedID, menuItem, 1)
+
+mixin main-nav-item(selectedID, item, level)
+  -
+    var thisItemClass = 'nav-item';
+    var thisLinkClass = 'nav-link';
+    if(selectedID == item.id) {
+      thisItemClass += '  active';
+    }
+
+  li(class= thisItemClass)
+    a(class= thisLinkClass, href=item.url)= item.name
+    block
+

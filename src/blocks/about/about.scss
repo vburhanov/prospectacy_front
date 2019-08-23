@@ -1,0 +1,30 @@
+// В этом файле должны быть стили для БЭМ-блока about, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.about {
+  background-color: $gray-bgr-lite;
+  &__inner {
+    padding-top: 8%;
+    padding-bottom: 8%;
+    @media (min-width: $screen-lg) {
+      margin-left: 9%;
+      margin-right: 9%;
+    }
+    @media (min-width: $screen-xl){
+      margin-left: 16%;
+      margin-right: 16%;
+    }
+    &__firstbl {
+      width: 35%;
+      display: block;
+    }
+    &__secondbl {
+      width: 40%;
+      margin-left: auto;
+    }
+    p {
+      font-size: 1.875rem;
+    }
+  }
+}

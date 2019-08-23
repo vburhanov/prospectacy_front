@@ -1,0 +1,34 @@
+//- Все примеси в этом файле должны начинаться c имени блока (about)
+
+mixin about(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +about('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' about--' + modsList[i].trim();
+      }
+    }
+
+  .about(class=allMods)&attributes(attributes)
+    .about__inner.container
+      .row
+        .col-12
+          .about__inner__firstbl
+            p Берёмся за работу, когда у компании назревает спор или он уже начался. Подадим иск или выстроим защиту против иска.
+        .col-12
+          .about__inner__secondbl
+            div
+              p Поможем выйти победителем при взыскании дебиторской задолженности, спорах с договорами поставки, подряда и займа.
+              p При нарушениях договора аренды и услуг.
+              p При любых спорах с недвижимостью.
+              p А также прениях с государственными органами и административных нарушениях.
+          block

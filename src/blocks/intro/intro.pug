@@ -1,0 +1,47 @@
+//- Все примеси в этом файле должны начинаться c имени блока (intro)
+
+mixin intro(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +intro('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' intro--' + modsList[i].trim();
+      }
+    }
+
+  .intro(class=allMods)&attributes(attributes)
+    .intro__inner.container
+      .row
+        .col-12
+          h1
+            | Ведём и выигрываем
+            br/ дела в арбитражных
+            br/ судах Москвы и СПБ
+          .features
+            a.js-btn_callback(href='#')
+              span Оставить заявку
+            .row
+              .col-lg-4.features__item
+                span.numb 01
+                span.title Помогаем бизнесу сохранить деньги
+                p Занимаемся урегулированием конфликтов и судебных споров среднего и крупного бизнеса.
+              .col-lg-4.features__item
+                span.numb 02
+                span.title Находим решения в каждом деле
+                p Досконально изучаем проблему и специфику бизнеса. Находим пути решения конкретно вашего случая.
+              .col-lg-4.features__item
+                span.numb 03
+                span.title
+                  | Консультируем
+                  br/ бесплатно
+                p Обсудим задачу, оценим возможность подачи в суд или мирного решения.
+              block
