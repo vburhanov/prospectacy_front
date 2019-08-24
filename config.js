@@ -26,13 +26,14 @@ let config = {
     // 'somePackage/dist/somePackage.js', // для 'node_modules/somePackage/dist/somePackage.js',
   ],
   'addJsAfter': [
+    './scrollr.min.js',
     './script.js',
   ],
   'addAssets': {
     'src/img/*.{png,svg,jpg,jpeg}': 'img/',
     'src/fonts/graphik/GraphikLCG-Medium.otf': 'fonts/',
     'src/fonts/graphik/GraphikLCG-Regular.otf': 'fonts/',
-    'src/fonts/halvar/HalvarBreitschriftRegular.ttf': 'fonts/'
+    'src/fonts/halvar/HalvarBreitschriftBold.ttf': 'fonts/'
     // 'src/favicon/*.{png,ico,svg,xml,webmanifest}': 'img/favicon',
     // 'node_modules/somePackage/images/*.{png,svg,jpg,jpeg}': 'img/',
   },

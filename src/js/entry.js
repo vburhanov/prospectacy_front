@@ -11,6 +11,7 @@ require('../blocks/main-nav/main-nav.js');
 require('../blocks/about/about.js');
 require('../blocks/intro/intro.js');
 require('../blocks/portfolio/portfolio.js');
+require('./scrollr.min.js');
 require('./script.js');
 
 /*!*

@@ -1,0 +1,8 @@
+// В этом файле должны быть стили для БЭМ-блока preloader, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.preloader {
+
+  $block-name:                &; // #{$block-name}__element
+}

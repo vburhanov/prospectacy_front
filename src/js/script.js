@@ -1,8 +1,14 @@
-// const ready = require('./utils/documentReady.js');
+const ready = require('./utils/documentReady.js');
 
 ready(function(){
   console.log('DOM героически построен!');
 });
 
 const $ = require('jquery');
-$( document ).ready(function() {});
+// const skrol = require('skrollr');
+$( document ).ready(function() {
+  skrollr.init({
+    smoothScrolling: false,
+    mobileDeceleration: 0.004
+  });
+});

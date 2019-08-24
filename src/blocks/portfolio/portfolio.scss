@@ -7,8 +7,8 @@
   &__inner {
     padding: 8% 0;
     @media (min-width: $screen-lg) {
-      margin-left: 9%;
-      margin-right: 9%;
+      margin-left: auto;
+      margin-right: auto;
     }
     @media (min-width: $screen-xl){
       margin-left: 16%;
@@ -27,7 +27,7 @@
       &__numb {
         margin-top: 118px;
         color: $main-blue;
-        font-family: $font-family-b;
+        font-family: $font-family-xx;
         text-transform: uppercase;
         line-height: normal;
         font-size: 6.4375rem;

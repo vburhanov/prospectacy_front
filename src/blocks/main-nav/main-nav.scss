@@ -17,6 +17,7 @@
         .nav-link {
           padding: 0;
           color: $white;
+          font-family: $font-family-b;
           &:hover,
           &:focus {
             text-decoration: none;
@@ -33,6 +34,7 @@
     color: $white;
     margin-left: 3%;
     position: relative;
+    font-family: $font-family-b;
     .navbar-text-bottom {
       color: $white;
       opacity: 0.5;
