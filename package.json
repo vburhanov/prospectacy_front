@@ -62,7 +62,7 @@
     "gulp.spritesmith": "^6.3.0",
     "husky": "^1.1.4",
     "jstransformer-markdown-it": "^2.0.0",
-    "lint-staged": "^8.0.4",
+    "lint-staged": "^13.1.0",
     "merge-stream": "^1.0.1",
     "mkdirp": "^0.5.1",
     "path": "^0.12.7",
